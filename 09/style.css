@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.container header {
+  font-size: 1.5em;
+  margin-bottom: 12px;
+}
+.form-wrapper {
+  background: #f4f4f4;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  width: 380px;
+  padding: 16px;
+  margin: 16px;
+}
+form {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  background: #ffffff;
+}
+form .form-split {
+  display: flex;
+  justify-content: flex-start;
+}
+form .form-split > .form-group {
+  padding-right: 25px;
+}
+form .form-group {
+  margin-bottom: 16px;
+}
+form .form-group > label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 1em;
+  color: #586069;
+}
+
+form .form-group > label.label-check {
+  display: inline;
+}
+
+form .form-group > .form-control[type="text"],
+form .form-group > .form-control[type="password"],
+form .form-group > .form-control[type="email"],
+form .form-group > .form-control[type="tel"] {
+  width: 100%;
+  height: 34px;
+  padding: 8px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #27ae60;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+}
+
+.col-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-2 .btn {
+  width: 48%;
+}
+
+.col-2 .btn.default {
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.error {
+  color: #ff0f0f;
+  font-size: 0.8em;
+  margin-top: 6px;
+}
+
+.smile {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.joke-wrapper {
+  display: flex;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border-width: 3px;
+  border-style: dashed;
+  align-items: center;
+  position: relative;
+}
+
+.joke-wrapper:after {
+  mix-blend-mode: difference;
+}
+
+.refresh {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 14px;
+  height: 14px;
+  background: #f4f4f4;
+  padding: 8px;
+  display: block;
+  background: url(../09/refresh.svg) no-repeat center center;
+}
+
+.refresh img {
+  width: 100%;
+}

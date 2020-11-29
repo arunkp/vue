@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=
+Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
+  </head>
+  <body>
+    <div id="vue-app" class="container">
+      <header>😈 Your details now 🔫</header>
+      <form action="https://example.com/api/create" method="post">
+        <div class="form-group">
+          <label>First Name</label>
+          <input class="form-control" type="text" name="first_name" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input class="form-control" type="text" name="last_name" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input class="form-control" type="email" name="email" />
+        </div>
+        <button class="btn" type="submit">Sign up now 😱</button>
+      </form>
+    </div>
+    <script>
+      const vueApp = new Vue({
+        el: "#vue-app",
+      });
+    </script>
+  </body>
+</html>

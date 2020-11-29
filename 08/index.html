@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
+  </head>
+  <body>
+    <div id="vue-app"></div>
+
+    <!-- Import UserForm Component JS -->
+    <script src="./components/UserForm.vue.js"></script>
+
+    <script>
+      // import using vue
+      Vue.component("UserForm", UserForm);
+
+      const vueApp = new Vue({
+        el: "#vue-app",
+        data() {
+          return {
+            fields: [
+              {
+                label: "First Name",
+                name: "firstName",
+                type: "text",
+              },
+              {
+                label: "Last Name",
+                name: "lastName",
+                type: "text",
+              },
+              {
+                label: "Email",
+                name: "email",
+                type: "email",
+              },
+              {
+                label: "Password",
+                name: "password",
+                type: "password",
+              },
+            ],
+            marketingFields: [
+              {
+                label: "Full Name",
+                name: "fullName",
+                type: "text",
+              },
+              {
+                label: "Gender Selection",
+              },
+              {
+                label: "Female",
+                name: "gender",
+                type: "radio",
+              },
+              {
+                label: "Male",
+                name: "gender",
+                type: "radio",
+              },
+              {
+                label: "Do you want to agree to the terms and conditions?",
+                name: "tnc",
+                type: "checkbox",
+              },
+            ],
+            hrFields: [
+              {
+                label: "Full Name",
+                name: "fullName",
+                type: "text",
+              },
+              {
+                label: "Mobile Phone",
+                name: "mobilePhone",
+                type: "tel",
+              },
+              {
+                label: "Subscribe to newsletter",
+                name: "tnc",
+                type: "checkbox",
+              },
+            ],
+            title: "😈 Your details now 🔫",
+            mTitle: "Marketing Form Details",
+            hrTitle: "HR Form Details",
+            btnText: "Sign up now 😱",
+            btnTextAlt: "Submit",
+          };
+        },
+        methods: {
+          formSubmitEvent() {
+            this.title = "✅ Force is strong in this one.";
+          },
+          formSubmitCancel() {
+            this.title = "🧨 Try again, maybe?";
+          },
+        },
+        template: `
+        <div>
+          <div class="container">
+            <UserForm
+            :title="title"
+            :fields="fields"
+            :btn-text="btnText"
+            @formSubmit="formSubmitEvent"
+            @cancelled="formSubmitCancel"
+            async></UserForm>
+            <UserForm
+            :title="mTitle"
+            :fields="marketingFields"
+            :btn-text="btnTextAlt"
+            @formSubmit="formSubmitEvent"
+            @cancelled="formSubmitCancel"
+            async></UserForm>
+            <UserForm
+            :title="hrTitle"
+            :fields="hrFields"
+            :btn-text="btnTextAlt"
+            @formSubmit="formSubmitEvent"
+            @cancelled="formSubmitCancel"
+            async></UserForm>
+          </div>
+        </div>
+        </div>
+        `,
+      });
+    </script>
+  </body>
+</html>
