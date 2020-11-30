@@ -14,7 +14,7 @@ const DadJokes = {
         <div class="joke-wrapper" :style="{borderColor:getColor}">
             <img class="smile" src="../09/smile.svg" >
             {{joke}}
-            <a class="refresh" @click.prevent="refreshJoke"></a>
+            <a href="#" class="refresh" @click.prevent="refreshJoke"></a>
         </div>
     `,
   methods: {
